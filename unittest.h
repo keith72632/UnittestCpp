@@ -6,9 +6,10 @@
 
 class Unittest {
     private:
-        std::vector<void (*)> functions;
         int _pass_flags;
         int _err_flags;
+    protected:
+        std::vector<void (*)()> functions;
     public:
         Unittest();
         template<typename T> bool assertTrue(T value){
